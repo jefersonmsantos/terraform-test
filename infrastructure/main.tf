@@ -1,3 +1,3 @@
 provider "google" {
-  region = var.google_region
+  region = "us-central1"
 }
