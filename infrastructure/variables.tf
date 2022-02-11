@@ -5,11 +5,3 @@ variable "google_region" {
 variable "google_zone" {
   default = "us-central1-c"
 }
-
-variable "google_project" {
-  default = "gcp-ace-335110"
-}
-
-variable "google_bucket" {
-  type = "terraform-test-files"
-}
