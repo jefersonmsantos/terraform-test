@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    name: Test infra on PR
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v1.2.1
+
+      - name: IaC Apply
+        env:
+          COMMAND_IAC: terraform
+        run: |
+          cd infrastructure
+          $COMMAND_IAC init
+          $COMMAND_IAC validate
