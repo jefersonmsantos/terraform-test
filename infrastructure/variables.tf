@@ -7,5 +7,9 @@ variable "google_zone" {
 }
 
 variable "google_project" {
-  type = string
+  default = "	gcp-ace-335110"
+}
+
+variable "google_bucket" {
+  type = "terraform-test-files"
 }
