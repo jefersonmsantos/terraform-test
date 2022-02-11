@@ -7,7 +7,7 @@ variable "google_zone" {
 }
 
 variable "google_project" {
-  default = "	gcp-ace-335110"
+  default = "gcp-ace-335110"
 }
 
 variable "google_bucket" {
