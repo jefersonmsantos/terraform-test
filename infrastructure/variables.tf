@@ -11,5 +11,5 @@ variable "google_project" {
 }
 
 variable "google_bucket" {
-  default = "terraform-test-files2"
+  default = "terraform-test-files"
 }
